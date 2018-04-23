@@ -41,4 +41,12 @@ export class IsotopeGridComponent implements OnInit {
           this.isotope.layout();
       });
   }
+
+    public filter(className: string): void {
+        this.isotope.arrange({
+            filter: className
+        });
+
+        this.isotope.arrange();
+    }
 }
