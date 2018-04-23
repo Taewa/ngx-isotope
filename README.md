@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/angular2-isotope.svg)](https://www.npmjs.com/package/ngx-isotope)
 
+This is a fork of [ng-isotope](https://github.com/ascodix/ngx-isotope)
 > ngx-isotope is in development and **not ready for production use**.
 > Feel free to install and try it out, but depend on it at your own risk.
 

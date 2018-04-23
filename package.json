@@ -1,5 +1,5 @@
 {
-  "name": "ngx-isotope",
+  "name": "ngx-isotopex",
   "version": "0.1.7",
   "scripts": {
     "build": "gulp build",
@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ascodix/ngx-isotope"
+    "url": "https://github.com/Taewa/ngx-isotope"
   },
   "author": {
-    "name": "Albuisson Stéphane",
-    "email": "stephane.albuisson@gmail.com"
+    "name": "Taehwa Kim",
+    "email": "dev@taehwakim.com"
   },
   "keywords": [
     "angular2",
@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ascodix/ngx-isotope/issues"
+    "url": "https://github.com/Taewa/ngx-isotope"
   },
   "devDependencies": {
     "@angular/common": "^4.0.0",
