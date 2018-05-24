@@ -19,7 +19,7 @@ This is a fork of [ng-isotope](https://github.com/ascodix/ngx-isotope)
 To install this library, run:
 
 ```bash
-$ npm install ngx-isotope --save
+$ npm install ngx-isotopex --save
 ```
 
 If you're using angular-cli add `isotope-layout`, `masonry-layout` and `imagesloaded` to your file configuration angular-cli.json:
