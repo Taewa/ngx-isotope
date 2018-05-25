@@ -5,6 +5,7 @@ var gulp = require('gulp'),
   rollup = require('gulp-rollup'),
   rename = require('gulp-rename'),
   del = require('del'),
+  exec = require('child_process').exec,
   runSequence = require('run-sequence'),
   inlineResources = require('./tools/gulp/inline-resources');
 
@@ -50,7 +51,8 @@ gulp.task('inline-resources', function () {
  */
 gulp.task('ngc', function () {
   return ngc({
-    project: `${tmpFolder}/tsconfig.es5.json`
+    // project: `${tmpFolder}/tsconfig.es5.json`
+    project: `${tmpFolder}/tsconfig-aot.json`
   })
     .then((exitCode) => {
       if (exitCode === 1) {
@@ -60,6 +62,14 @@ gulp.task('ngc', function () {
       }
     });
 });
+
+// gulp.task('ngc', function(cb){
+//     exec('node_modules/.bin/ngc -p tsconfig-aot.json', function (err, stdout, stderr) {
+//         console.log('RUN ngc!!!!!!!!!!!!!');
+//         console.log(stdout, stderr);
+//         cb(err)
+//     });
+// });
 
 /**
  * 5. Run rollup inside the /build folder to generate our Flat ES module and place the
