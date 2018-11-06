@@ -54,4 +54,9 @@ export class IsotopeGridComponent implements OnInit {
 
         this.isotope.arrange();
     }
+
+    public remove(elem: HTMLElement): void {
+        this.isotope.remove(elem);
+        this.isotope.arrange();
+    }
 }

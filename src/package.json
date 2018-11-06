@@ -21,8 +21,8 @@
   "jsnext:main": "ngx-isotope.js",
   "typings": "ngx-isotope.d.ts",
   "peerDependencies": {
-    "@angular/core": "^4.0.0",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "@angular/core": "^5.2.0",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
   }
 }
