@@ -52,7 +52,7 @@ gulp.task('inline-resources', function () {
 gulp.task('ngc', function () {
   return ngc({
     // project: `${tmpFolder}/tsconfig.es5.json`
-    project: `${tmpFolder}/tsconfig-aot.json`
+    project: `${rootFolder}/src/tsconfig-aot.json`
   })
     .then((exitCode) => {
       if (exitCode === 1) {
@@ -141,7 +141,7 @@ gulp.task('rollup:umd', function () {
       // The name to use for the module for UMD/IIFE bundles
       // (required for bundles with exports)
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#modulename
-      moduleName: 'ngx-isotope',
+      moduleName: 'ngx-isotopex',
 
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#globals
       globals: {
@@ -159,7 +159,8 @@ gulp.task('rollup:umd', function () {
  *    on step 5.
  */
 gulp.task('copy:build', function () {
-  return gulp.src([`${buildFolder}/**/*`, `!${buildFolder}/**/*.js`])
+  // return gulp.src([`${buildFolder}/**/*`, `!${buildFolder}/**/*.js`])
+  return gulp.src([`${buildFolder}/**/*`])
     .pipe(gulp.dest(distFolder));
 });
 
@@ -195,17 +196,30 @@ gulp.task('clean:build', function () {
 
 gulp.task('compile', function () {
   runSequence(
-    'clean:dist',
-    'copy:source',
-    'inline-resources',
-    'ngc',
-    'rollup:fesm',
-    'rollup:umd',
-    'copy:build',
-    'copy:manifest',
-    'copy:readme',
-    'clean:build',
-    'clean:tmp',
+      'ngc',
+      'clean:dist',
+      'copy:source',
+      'inline-resources',
+      'rollup:fesm',
+      'rollup:umd',
+      'copy:build',
+      'copy:manifest',
+      'copy:readme',
+      'clean:build',
+      'clean:tmp',
+
+
+    // 'clean:dist',
+    // 'copy:source',
+    // 'inline-resources',
+    // 'ngc',
+    // 'rollup:fesm',
+    // 'rollup:umd',
+    // 'copy:build',
+    // 'copy:manifest',
+    // 'copy:readme',
+    // 'clean:build',
+    // 'clean:tmp',
     function (err) {
       if (err) {
         console.log('ERROR:', err.message);

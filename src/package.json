@@ -1,20 +1,20 @@
 {
-  "name": "ngx-isotope",
-  "version": "0.1.7",
+  "name": "ngx-isotopex",
+  "version": "0.1.11",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ascodix/ngx-isotope"
+    "url": "https://github.com/Taewa/ngx-isotope"
   },
   "author": {
-    "name": "Albuisson Stéphane",
-    "email": "stephane.albuisson@gmail.com"
+    "name": "Taehwa KIM",
+    "email": "hadeath03@gmail.com"
   },
   "keywords": [
     "angular"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ascodix/ngx-isotope/issues"
+    "url": "https://github.com/Taewa/ngx-isotope/issues"
   },
   "main": "ngx-isotope.umd.js",
   "module": "ngx-isotope.js",
