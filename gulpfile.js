@@ -52,7 +52,8 @@ gulp.task('inline-resources', function () {
 gulp.task('ngc', function () {
   return ngc({
     // project: `${tmpFolder}/tsconfig.es5.json`
-    project: `${rootFolder}/src/tsconfig-aot.json`
+    project: `${tmpFolder}/tsconfig-aot.json`
+
   })
     .then((exitCode) => {
       if (exitCode === 1) {
@@ -209,17 +210,17 @@ gulp.task('compile', function () {
       // 'clean:tmp',
 
 
-    'clean:dist',
-    'copy:source',
-    'inline-resources',
-    'ngc',
-    'rollup:fesm',
-    'rollup:umd',
-    'copy:build',
-    'copy:manifest',
-    'copy:readme',
-    'clean:build',
-    'clean:tmp',
+      'clean:dist',
+      'copy:source',
+      'inline-resources',
+      'ngc',
+      'rollup:fesm',
+      'rollup:umd',
+      'copy:build',
+      'copy:manifest',
+      'copy:readme',
+      'clean:build',
+      'clean:tmp',
     function (err) {
       if (err) {
         console.log('ERROR:', err.message);
